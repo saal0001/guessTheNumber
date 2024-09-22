@@ -45,20 +45,18 @@ function checkAnswer() {
     return userInput
 }
 
-function score(){
+function score() {
     let guessedAnswer = checkAnswer()
     let currentScore = Number(lblScore.textContent)
 
-    if (guessedAnswer < secretNumber){
+    if (guessedAnswer < secretNumber) {
         currentScore--
         lblScore.textContent = currentScore
-    }
-    else if (guessedAnswer > secretNumber){
+    } else if (guessedAnswer > secretNumber) {
         currentScore--
         lblScore.textContent = currentScore
-    }
-    else {
-        if (currentScore>lblHighScore.textContent){
+    } else {
+        if (currentScore > lblHighScore.textContent) {
             lblHighScore.textContent = currentScore
         }
     }
@@ -77,4 +75,4 @@ function resetGame() {
 
 again.addEventListener("click", resetGame);
 pbGuess.addEventListener("click", checkAnswer)
-pbGuess.addEventListener("click",score)
+pbGuess.addEventListener("click", score)
