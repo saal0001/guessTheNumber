@@ -24,7 +24,6 @@ function numberGenerator() {
     secretNumber = Math.trunc(Math.random() * 20 + 1)
 }
 
-
 function checkAnswer() {
     let currentScore = Number(lblScore.textContent)
     let userInput = Number(inpGuess.value)
